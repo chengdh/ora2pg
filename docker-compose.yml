@@ -8,10 +8,13 @@ services:
     container_name: ora2pg
     network_mode: "host"
     volumes:
-      - ora2pg-data:/data
+      - ./output:/data
       - ./config:/config
     environment:
       - CONFIG_LOCATION=config/ora2pg.conf
+      # - ORA_HOST="dbi:Oracle:host=117.158.215.156;sid=ORCL;port=11251"
+      # - ORA_USER="bzuser"
+      # - ORA_PWD="PASSWORDisBZUSER123"
 
 
 volumes:
