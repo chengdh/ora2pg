@@ -13,7 +13,11 @@ services:
       # - ORA_HOST="dbi:Oracle:host=117.158.215.156;sid=ORCL;port=11251"
       # - ORA_USER="bzuser"
       # - ORA_PWD="PASSWORDisBZUSER123"
-
+  pgsql:
+    image: postgres:14.5
+    network_mode: "host"
+    volumes:
+      - ./pgsql:/pgsql
 
 volumes:
   ora2pg-data:
