@@ -41,3 +41,4 @@ SELECT
 	'draft' 		AS state
 FROM BZ_APPLY
 WHERE USER_TYPE = 0
+AND CHANGEGUID NOT IN (SELECT imp_id from equip_bill where imp_id is not null)	
