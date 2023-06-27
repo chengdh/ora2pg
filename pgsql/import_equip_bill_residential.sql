@@ -60,3 +60,4 @@ SELECT
 FROM BZ_APPLY
 WHERE USER_TYPE = 1
 AND CHANGEGUID NOT IN (SELECT imp_id from equip_bill_residential where imp_id is not null)	
+AND CREATEDDATE > '2023-06-27'  	
